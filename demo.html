@@ -59,11 +59,29 @@
 			<p>its paragraph tag</p>
 			<h6>its h6 tag</h6>
 		</div>
+		<hr>
+		<h3>Task-5<br>Every other visible li on click of bellow button</h3>
+		<button type="button" name="click4" id="click4">Click me</button>
+		<div>
+			<ul>
+				<li>orange</li>
+				<li style="display: none;">mango</li>
+				<li>pinaple</li>
+				<li style="display: none;">papaya</li>
+				<li>grapes</li>
+				<li style="display: none;">banana</li>
+			</ul>
+		</div>
+		<hr>
+		<h3>Task-6<br>Use the DOM API to target the #square and periodically change it's position in a random direction.</h3>
+	    <button type="button" name="click5" id="click5">Click me</button>
+	    <div class="square">
+	    </div>
 	</center>
 	<script>
 		$(document).ready(function(){
 			$('#click').click(function(){
-				$('p:not(.ignor').hide();
+				$('p:not(.ignor)').hide();
 			});
 			$('#click1').click(function(){
 				$('p:contains(REPLACE_ME)').replaceWith("REPLACED!");
@@ -73,6 +91,15 @@
 			});
 			$('#click3').click(function(){
 				$(':header').css({"color":"#660000"});
+			});
+			$('#click4').click(function(){
+				//$('li:not(display:none)').css({"color":"green"});
+			});
+			$('#click5').click(function(){
+				for(var i=1;i<9;i++){
+				$('div.square').animate({left: '250px'});
+				$('div.square').css({"position":"absolute"});
+				}
 			});
 		});
 	</script>
