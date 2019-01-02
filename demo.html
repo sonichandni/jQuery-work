@@ -1,9 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>jQuery Demo</title>
+	<link rel="stylesheet" type="text/css" href="./asset/style.css">
+	<script src="./asset/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-
+	<center>
+		<h3>All p tags that have no children, but only if they don't have a class of ignore will hide when click on bellow button
+		</h3>
+		<button type="button" name="click" id="click">Click me</button>
+		<div>
+			<p>
+				<h4>1.p tag having one child</h4>
+			</p>
+			<p>2. p tag don't have any child</p>
+			<p>
+				<h4 class="ignor">3.p tag have child with class ignor</h4>
+			</p>
+			<p>4.p tag don't have any child</p>
+			<p class="ignor">5.p tag don't have any child but have class ignor</p>
+		</div>
+	</center>
+	<script>
+		$(document).ready(function(){
+			$('#click').click(function(){
+				$('p:not(.ignor').hide();
+			});
+		});
+	</script>
 </body>
 </html>
