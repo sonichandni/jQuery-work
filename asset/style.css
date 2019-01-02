@@ -13,3 +13,10 @@ button {
 	width: 100px;
 	height: 50px;
 }
+div.block {
+	width: 200px;
+	height: 20px;
+}
+div.special {
+	opacity: 1;
+}

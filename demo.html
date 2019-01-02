@@ -23,7 +23,7 @@
 			<p class="ignor">5.p tag don't have any child but have class ignor</p>
 		</div>
 		<hr>
-		<h3>Task-2<br>Any element with the text "REPLACE_ME" in it, it will replace with "REPLACED!" on click of button</h3>
+		<h3>Task-2<br>Any element with the text "REPLACE_ME" in it, it will replace with "REPLACED!" on click of bellow button</h3>
 		<button type="button" name="click1" id="click1">Click me</button>
 		<div>
 			<p> REPLACE_ME </p>
@@ -31,6 +31,19 @@
 			<p> REPLACE_ME </p>
 			<p> Hi... </p>
 			<p> Whatsapp...! </p>
+		</div>
+		<hr>
+		<h3>Task-2<br>All div tags with a child that has a class of special will shift left on click of bellow button</h3>
+		<button type="button" name="click2" id="click2">Click me</button>
+		<div class="block">
+			<p class="special">I am Special Class in p tag</div>
+		</div>
+		<div class="block">
+		</div>
+		<div class="block">
+			<p class="special">I am Special Class in div tag</div>
+		</div>
+		<div class="block">
 		</div>
 		<hr>
 	</center>
@@ -41,6 +54,9 @@
 			});
 			$('#click1').click(function(){
 				$('p:contains(REPLACE_ME)').replaceWith("REPLACED!");
+			});
+			$('#click2').click(function(){
+				$('div.block:has(p.special)').hide();
 			});
 		});
 	</script>
