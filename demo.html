@@ -69,14 +69,16 @@
 				<li style="display: block;">pinaple</li>
 				<li style="display: none;">papaya</li>
 				<li style="display: block;">grapes</li>
-				<li style="display: none;">banana< /li>
+				<li style="display: none;">banana</li>
 			</ul>
 		</div>
 		<hr>
 		<h3>Task-6<br>Use the DOM API to target the #square and periodically change it's position in a random direction.</h3>
 	    <button type="button" name="click5" id="click5">Click me</button>
-	    <div id="square">
-	    </div>
+	    <div class="screen" id="screen">
+		    <div id="square">
+		    </div>
+		</div>
 	</center>
 	<script>
 		$(document).ready(function(){
@@ -93,6 +95,7 @@
 				$(':header').css({"color":"#ff3399"});
 			});
 			$('#click4').click(function(){
+				$("#screen").addClass("loading");
 				$("li").each(function(){
 					if(this.style.display == "block")
 					{
@@ -102,11 +105,11 @@
 
 			});
 			$('#click5').click(function(){
-				var div = $("#square");
+				var div = $("#screen #square");
 				//var size='10';
 				window.setInterval(function(){
 				  anim();
-				}, 5000);
+				},1000);
 				function anim(){
 				div.animate({left: '10%'}, "slow");
     			div.animate({bottom: '10%'}, "slow");

@@ -28,4 +28,15 @@ li {
 	height:50px;
  	background-color:red;
 	position:absolute;
+	border-radius: 50px;
+}
+div.screen {
+	width: 50%;
+	height: 500px;
+	background: black;
+	padding: 1%;
+	position: absolute;
+}
+.loading {
+   overflow: hidden;   
 }
