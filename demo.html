@@ -103,24 +103,12 @@
 			});
 			$('#click5').click(function(){
 				var div = $("#square");
-				var size='10';
-				for(var i=1;i<100;i++){
-				/*div.animate({left: '10%'}, "slow");
-    			div.animate({bottom: '10%'}, "slow");
-    			div.animate({right: '10%'}, "slow");
-    			div.animate({top: '80%'}, "slow");
-    			div.animate({left: size.'%'}, "slow");
-    			div.animate({bottom: 'size%'}, "slow");
-    			div.animate({right: 'size%'}, "slow");
-    			div.animate({top: 'size%'}, "slow");
-    			if(size<=100)
-    			{
-    				size=size+10;
-    			}
-    			else{
-    				size=10;
-    			}*/
-    			div.animate({left: '10%'}, "slow");
+				//var size='10';
+				window.setInterval(function(){
+				  anim();
+				}, 5000);
+				function anim(){
+				div.animate({left: '10%'}, "slow");
     			div.animate({bottom: '10%'}, "slow");
     			div.animate({right: '10%'}, "slow");
     			div.animate({top: '10%'}, "slow");
@@ -129,6 +117,7 @@
     			div.animate({diagonal: '50%'}, "slow");
     			div.animate({top: '80%'}, "slow");
 				}
+
 			});
 		});
 	</script>
