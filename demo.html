@@ -33,7 +33,7 @@
 			<p> Whatsapp...! </p>
 		</div>
 		<hr>
-		<h3>Task-3<br>All div tags with a child that has a class of special will fade out on click of bellow button</h3>
+		<h3>Task-3<br>All div tags with a child that has a class of special will shift left on click of bellow button</h3>
 		<button type="button" name="click2" id="click2">Click me</button>
 		<div class="block">
 			<p class="special">I am Special Class in p tag</div>
@@ -60,7 +60,7 @@
 			<h6>its h6 tag</h6>
 		</div>
 		<hr>
-		<h3>Task-5<br>Change color of Every visible li on click of bellow button</h3>
+		<h3>Task-5<br>Every other visible li on click of bellow button</h3>
 		<button type="button" name="click4" id="click4">Click me</button>
 		<div>
 			<ul>
@@ -73,6 +73,10 @@
 			</ul>
 		</div>
 		<hr>
+		<h3>Task-6<br>Use the DOM API to target the #square and periodically change it's position in a random direction.</h3>
+	    <button type="button" name="click5" id="click5">Click me</button>
+	    <div id="square">
+	    </div>
 	</center>
 	<script>
 		$(document).ready(function(){
@@ -89,13 +93,42 @@
 				$(':header').css({"color":"#ff3399"});
 			});
 			$('#click4').click(function(){
-				$("li").each(function(i){
+				$("li").each(function(){
 					if(this.style.display == "block")
 					{
 						this.style.color = "#ff3399";
 					}
 				});
 
+			});
+			$('#click5').click(function(){
+				var div = $("#square");
+				var size='10';
+				for(var i=1;i<100;i++){
+				/*div.animate({left: '10%'}, "slow");
+    			div.animate({bottom: '10%'}, "slow");
+    			div.animate({right: '10%'}, "slow");
+    			div.animate({top: '80%'}, "slow");
+    			div.animate({left: size.'%'}, "slow");
+    			div.animate({bottom: 'size%'}, "slow");
+    			div.animate({right: 'size%'}, "slow");
+    			div.animate({top: 'size%'}, "slow");
+    			if(size<=100)
+    			{
+    				size=size+10;
+    			}
+    			else{
+    				size=10;
+    			}*/
+    			div.animate({left: '10%'}, "slow");
+    			div.animate({bottom: '10%'}, "slow");
+    			div.animate({right: '10%'}, "slow");
+    			div.animate({top: '10%'}, "slow");
+    			div.animate({left: '80%'}, "slow");
+    			div.animate({right: '80%'}, "slow");
+    			div.animate({diagonal: '50%'}, "slow");
+    			div.animate({top: '80%'}, "slow");
+				}
 			});
 		});
 	</script>
